@@ -87,5 +87,45 @@ character.levelUp = function() {
 
 // BONUS CHALLENGES
 // 1. Create a method to display all contact info formatted nicely
+contact.displayInfo = function() {
+    return `Name: ${this.name}\nPhone: ${this.phone}\nEmail: ${this.email}\nAddress: ${this.address}\nBirthday: ${this.birthday}`;
+};
+console.log(contact.displayInfo());
+
 // 2. Create a function to compare two products by price
+function compareProductsByPrice(productA, productB) {
+    if (productA.price > productB.price) {
+        return `${productA.name} is more expensive than ${productB.name}`;
+    } else if (productA.price < productB.price) {
+        return `${productB.name} is more expensive than ${productA.name}`;
+    } else {
+        return `${productA.name} and ${productB.name} have the same price`;
+    }
+}
+// Example usage:
+let anotherProduct = {
+    name: "Swiss Chocolate",
+    price: 15.99,
+    inStock: true,
+    category: "Sweets"
+};
+console.log(compareProductsByPrice(product, anotherProduct));
+
 // 3. Create a battle method that compares two characters
+function battle(characterA, characterB) {
+    if (characterA.level > characterB.level) {
+        return `${characterA.name} wins the battle!`;
+    } else if (characterA.level < characterB.level) {
+        return `${characterB.name} wins the battle!`;
+    } else {
+        return "It's a tie!";
+    }
+}
+// Example usage:
+let anotherCharacter = {
+    name: "Momo",
+    health: 90,
+    level: 70,
+    inventory: [2, 4, 6]
+};
+console.log(battle(character, anotherCharacter));

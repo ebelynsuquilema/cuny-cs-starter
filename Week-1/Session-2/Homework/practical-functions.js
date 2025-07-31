@@ -23,4 +23,4 @@ console.log(formatPhoneNumber("6462919355")); // (646) 291-9355
 console.log(formatPhoneNumber("123456789")); // Invalid phone number
 console.log(formatPhoneNumber("646-291-9355")); // (646) 291-9355
 console.log(validateEmail("test@example.com")); // true
-console.log(calculateAge(2000)); // e.g., 25 if current
+console.log(calculateAge(2006)); // e.g., 18 if current

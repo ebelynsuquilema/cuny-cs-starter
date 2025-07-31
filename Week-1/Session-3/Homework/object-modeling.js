@@ -6,11 +6,40 @@ let recipe = {
     name: "Chocolate Chip Cookies",
     servings: 24,
     // Add more properties here
+    ingredients: [
+        { ingredient: "Flour", amount: "2 cups" },
+        { ingredient: "Sugar", amount: "1 cup" },
+        { ingredient: "Brown Sugar", amount: "1 cup" },
+        { ingredient: "Butter", amount: "1 cup" },
+        { ingredient: "Eggs", amount: "2" },
+        { ingredient: "Vanilla Extract", amount: "1 tsp" },
+        { ingredient: "Baking Soda", amount: "1 tsp" },
+        { ingredient: "Salt", amount: "1/2 tsp" },
+        { ingredient: "Chocolate Chips", amount: "2 cups" }
+    ],
+    instructions: [
+        "Preheat oven to 350°F (175°C).",
+        "In a bowl, cream together the butter, sugar, and brown sugar until smooth.",
+        "Beat in the eggs one at a time, then stir in the vanilla.",
+        "Combine flour, baking soda, and salt; gradually blend into the creamed mixture.",
+        "Stir in chocolate chips.",
+        "Drop by rounded spoonfuls onto ungreased baking sheets.",
+        "Bake for 10-12 minutes or until edges are golden brown.",
+        "Cool on wire racks."
+    ]
 };
 
 // Test your object
 console.log(`Recipe: ${recipe.name}`);
 // Add more tests to display ingredients and instructions
+console.log("Ingredients:");
+recipe.ingredients.forEach(ing => {
+    console.log(`${ing.amount} of ${ing.ingredient}`);
+});
+console.log("Instructions:");
+recipe.instructions.forEach((step, index) => {
+    console.log(`${index + 1}. ${step}`);
+});
 
 
 // Task 2: Bank Account Object
@@ -19,17 +48,24 @@ let bankAccount = {
     accountNumber: "1234567890",
     balance: 1000,
     // Add more properties and methods here
+    transactions: [],
 
     deposit: function (amount) {
-        // Your code here
+        this.balance += amount;
+        this.transactions.push({ type: "deposit", amount: amount });
     },
 
     withdraw: function (amount) {
-        // Your code here
+        this.balance -= amount;
+        this.transactions.push({ type: "withdraw", amount: amount });
     },
 
     getBalance: function () {
-        // Your code here
+        return this.balance;
+    },
+
+    getTransactionHistory: function () {
+        return this.transactions;   
     }
 };
 
@@ -46,13 +82,14 @@ let album = {
     title: "Greatest Hits",
     artist: "The Classics",
     // Add more properties here
+    tracks: [],
 
     addTrack: function (trackName, duration) {
-        // Your code here
+        this.tracks.push({ name: trackName, duration: duration });
     },
 
     getTotalDuration: function () {
-        // Your code here
+        return this.tracks.reduce((total, track) => total + track.duration, 0);
     }
 };
 

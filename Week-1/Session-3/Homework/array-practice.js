@@ -4,6 +4,13 @@
 // TODO: Write a function to find the largest number in an array
 function findLargest(numbers) {
     // Your code here
+    let largest = numbers[0]; // Assume the first number is the largest
+    for (let i = 1; i < numbers.length; i++) {
+        if (numbers[i] > largest) {
+            largest = numbers[i]; // Update largest if current number is greater
+        }
+    }
+    return largest; // Return the largest number found
 }
 
 // Test your function
