@@ -1,17 +1,17 @@
 // Week 1 Session 3: Array Methods Practice
 
 // Challenge 1: Playlist Manager
-// TODO: Create an array of song titles
-let playlist = ["Song A", "Song B", "Song C"];
+let playlist = ["Khe", "EARFQUAKE", "Telepatia"];
+console.log("Playlist:", playlist);
 
-// TODO: Add a new song to the end of the playlist
+playlist.push("Melting");
+playlist.shift();
 
-// TODO: Remove the first song
+let index = playlist.indexOf("EARFQUAKE");
+console.log("Index of EARFQUAKE:", index);
 
-// TODO: Find the index of "Song B"
-
-// TODO: Check if "Song D" is in the playlist
-
+let isMeltingInPlaylist = playlist.includes("Melting");
+console.log("Is 'Melting' in playlist?", isMeltingInPlaylist);
 
 // Challenge 2: Search Feature
 // TODO: Create an array of usernames
@@ -19,23 +19,31 @@ let users = ["alice123", "bob456", "charlie789", "david101"];
 
 // TODO: Search for a username that contains "789"
 
-// TODO: Find all usernames that start with "a"
+let usersStartingWithA = users.filter(user => user.startsWith("a"));
+console.log("Users starting with 'a':", usersStartingWithA);
 
-// TODO: Count usernames longer than 7 characters
-
+let longUsernamesCount = users.filter(user => user.length > 7).length;
+console.log("Count of usernames longer than 7 characters:", longUsernamesCount);
 
 // Challenge 3: Data Processing
-// TODO: Create an array of numbers
-let numbers = [5, 12, 8, 130, 44, 23];
+let numbers = [5, 12, 8, 21, 7, 14];
 
-// TODO: Create a new array with only numbers greater than 10
+let numbersGreaterThan10 = numbers.filter(num => num > 10);
+console.log("Numbers greater than 10:", numbersGreaterThan10);
 
-// TODO: Create a new array with all numbers doubled
+let numbersDoubled = numbers.map(num => num * 2);
+console.log("Numbers doubled:", numbersDoubled);
 
-// TODO: Calculate the sum of all numbers
+let totalSum = numbers.reduce((acc, num) => acc + num, 0);
+console.log("Total sum of numbers:", totalSum);
 
+playlist.sort();
+console.log("Sorted playlist:", playlist);
 
-// BONUS CHALLENGES
-// 1. Sort the playlist alphabetically
-// 2. Find all users with numbers in their username
-// 3. Calculate the average of the numbers array
+// Find all users with numbers in their username
+let usersWithNumbers = users.filter(user => /\d/.test(user));
+console.log("Users with numbers in username:", usersWithNumbers);
+
+// Calculate the average of the numbers array
+let average = totalSum / numbers.length;
+console.log("Average of numbers array:", average);
