@@ -4,6 +4,13 @@
 // TODO: Create a valid JSON structure (as a string) for a book
 // Include: title, author, pages, genres (array), publication year
 let bookJSON = ''; // Create your JSON string here
+bookJSON = `{
+    "title": "The Notebook",
+    "author": "Nicholas Sparks",
+    "pages": 214,
+    "genres": ["Romance", "Drama"],
+    "publicationYear": 1996
+}`;
 
 // Test your JSON
 try {
@@ -18,7 +25,15 @@ try {
 // TODO: Create a valid JSON structure for a movie
 // Include: title, director, cast (array), rating, runtime
 let movieJSON = ''; // Create your JSON string here
+movieJSON = `{
+    "title": "Twilight",
+    "director": "Catherine Hardwicke",
+    "cast": ["Kristen Stewart", "Robert Pattinson", "Taylor Lautner"],
+    "rating": 5.2,
+    "runtime": 122
+}`;
 
+```
 
 // Challenge 3: Identify invalid JSON
 // TODO: Fix these invalid JSON strings

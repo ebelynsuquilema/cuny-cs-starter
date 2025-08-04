@@ -22,13 +22,13 @@ console.log("Is Student:", isStudent);
 
 // Task 3: Experiment with typeof operator
 // TODO: Check the type of each variable using typeof
-typeof fname; // string
-typeof age; // number   
-typeof isStudent; // boolean
+console.log("the type of variable myName is a " + typeof fname); // string
+console.log("the type of variable age is a " + typeof age); // number
+console.log("the type of variable isStudent is a " + typeof isStudent); // boolean
 
 // BONUS CHALLENGES
 // 1. Create a variable that holds your favorite quote
-const favoriteQuote = "The only limit to our realization of tomorrow is our doubts of today.";
+const favoriteQuote = "Real Eyes Realize Real Lies.";
 console.log("Favorite Quote:", favoriteQuote);
 // 2. Create a variable that calculates days until the weekend
 const today = new Date();

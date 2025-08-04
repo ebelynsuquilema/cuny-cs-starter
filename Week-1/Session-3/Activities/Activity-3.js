@@ -104,10 +104,10 @@ function compareProductsByPrice(productA, productB) {
 }
 // Example usage:
 let anotherProduct = {
-    name: "Swiss Chocolate",
+    name: "Chicken Breast",
     price: 15.99,
     inStock: true,
-    category: "Sweets"
+    category: "Meat"
 };
 console.log(compareProductsByPrice(product, anotherProduct));
 
@@ -123,7 +123,7 @@ function battle(characterA, characterB) {
 }
 // Example usage:
 let anotherCharacter = {
-    name: "Momo",
+    name: "Labubu",
     health: 90,
     level: 70,
     inventory: [2, 4, 6]
