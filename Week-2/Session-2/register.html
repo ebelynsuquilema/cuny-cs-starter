@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>User Registration</h1>
+<form action="/ebelyn" method="post">
+Text: <input type="text">
+<br>
+<br>
+Email: <input type="email">
+<br>
+<br>
+Password: <input type="password">
+<br>
+<br>
+Confirm Password: <input type="password">
+<br>
+<br>
+Date of Birth: <input type="date">
+<br>
+<br>
+Gender:  <input type="radio" name="gender" value="male"> Male
+<input type="radio" name="gender" value="female"> Female
+<input type="radio" name="gender" value="Other"> Other
+<br>
+<br>
+Interests: <input type="checkbox" name="interests" value="coding"> Coding
+<input type="checkbox" name="interests" value="cooking"> Cooking
+<input type="checkbox" name="interests" value="Movies"> Movies
+<input type="checkbox" name="interests" value="Hiking"> Hiking
+<input type="checkbox" name="interests" value="Music"> Music
+<br>
+<br>
+Country:  <select>
+  <option value="usa">United States</option>
+  <option value="canada">Canada</option>
+  <option value="uk">United Kingdom</option>
+  <option value="Guatemala">Australia</option>
+  <option value="other">Ecuador</option>
+ <option value="other">Other</option>
+</select>
+<br>
+<br>
+<h4>Please provide a brief bio about yourself:</h4>
+<textarea id="bio" name="bio" rows="3" cols="30" maxlength="200"></textarea><br><br>
+    <button type="submit">Submit</button>
+
+</form>
+</body>
+</html>
