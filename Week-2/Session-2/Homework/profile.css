@@ -1,0 +1,29 @@
+body {
+    background-color: #f8e8ee;
+    font-family: 'papyrus', cursive, sans-serif;
+    color: #e072a5;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+  
+} 
+
+a{
+    color: #bd89db;
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #bd89db;
+}
+a:hover {
+    text-decoration: underline;
+    color: #f898ca;
+}
+
+img {
+    border: 8px solid #f898ca;
+    border-radius: 8px;
+}
