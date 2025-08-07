@@ -1,0 +1,42 @@
+body {
+font-family: fantasy;
+background-color: #f5c8e1;
+margin: 40px;
+padding: 40px;
+}
+h1 {
+color: #ffffff;
+text-align: center;
+}
+form {
+max-width: 400px;
+margin: 0 auto;
+padding: 40px;
+border: 1px solid #ccc;
+border-radius: 10px;
+background-color: #fff;
+}
+label {
+display: block;
+margin-bottom: 8px;
+font-weight: bold;
+}
+input[type="text"], input[type="email"], input[type="password"] {
+width: 100%;
+padding: 8px;
+margin-bottom: 15px;
+border: 1px solid #ccc;
+border-radius: 5px;
+box-sizing: border-box;
+}
+button {
+background-color: #e94e77;
+color: white;
+border: none;
+padding: 10px 15px;
+cursor: pointer;
+border-radius: 5px;
+}
+button:hover {
+background-color: #d7375c;
+}
