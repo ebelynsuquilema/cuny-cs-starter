@@ -1,107 +1,288 @@
+/* Import a cute font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap');
+
+* {
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #ffeef8 0%, #f0e6ff 100%);
+    color: #5d4e75;
+    margin: 0;
+    line-height: 1.6;
+}
+
 header {
-    background: #f3e5ec;
-    padding: 1em;
     position: sticky;
     top: 0;
     z-index: 1000;
+    background: linear-gradient(135deg, #fff0f8 0%, #ffeef8 100%);
+    padding: 1.5em;
+    border-bottom: 3px solid #ffb3d9;
+    box-shadow: 0 4px 15px rgba(255, 179, 217, 0.4);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
 }
+
+header.scrolled {
+    padding: 1em 1.5em;
+    box-shadow: 0 6px 25px rgba(255, 179, 217, 0.5);
+}
+
 header .Ebelyn {
     display: flex;
     align-items: center;
     gap: 2em;
-    align-items: flex-start;
-    
+    max-width: 1200px;
+    margin: 0 auto;
 }
+
 header nav ul {
     display: flex;
-    gap: 1em;
+    gap: 1.5em;
     list-style: none;
     padding: 0;
     margin: 0;
 }
+
 header nav a {
     text-decoration: none;
-    color: #c4a0b3;
-    font-weight: bold;
+    color: #8b5a8c;
+    font-weight: 600;
+    padding: 0.5em 1em;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    background: rgba(255, 179, 217, 0.2);
+}
+
+header nav a:hover {
+    background: #ffb3d9;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 179, 217, 0.4);
 }
 
 .main-grid {
     display: grid;
-    grid-template-columns: 250px 1fr;
+    grid-template-columns: 280px 1fr;
     gap: 2em;
     padding: 2em;
+    max-width: 1200px;
+    margin: 0 auto;
 }
+
 .sidebar {
-    background: #c4a0b3;
-    padding: 1em;
-    border-radius: 8px;
+    background: linear-gradient(135deg, #ffb3d9 0%, #ff99cc 100%);
+    padding: 2em;
+    border-radius: 20px;
+    color: white;
+    box-shadow: 0 8px 25px rgba(255, 153, 204, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    position: relative;
 }
+
+.sidebar h2, .sidebar h3 {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar p, .sidebar li {
+    color: rgba(255, 255, 255, 0.95);
+}
+
 .content {
-    background: #c4a0b3;
-    padding: 1em;
-    border-radius: 8px;
+    background: linear-gradient(135deg, #fff0f8 0%, #ffeef8 100%);
+    padding: 2.5em;
+    border-radius: 20px;
+    color: #5d4e75;
+    box-shadow: 0 8px 25px rgba(255, 179, 217, 0.2);
+    border: 3px solid rgba(255, 179, 217, 0.3);}
+
+.content h1, .content h2, .content h3 {
+    color: #8b5a8c;
+    text-shadow: 1px 1px 2px rgba(255, 179, 217, 0.3);
+}
+
+.content p, .content li {
+    color: #5d4e75;
+    font-size: 1.1em;
 }
 
 footer {
-    background: #f3e5ec;
-    color: #500a0a;
-    padding: 2em 1em;
-}
+    background: linear-gradient(135deg, #8b5a8c 0%, #7d164a 100%);
+    color: #ffeef8;
+    padding: 3em 2em;}
+
 .footer-columns {
     display: flex;
     justify-content: space-between;
-    gap: 2em;
+    gap: 3em;
+    max-width: 1200px;
 }
-.footer-columns div {
-    flex: 1;
-}
+
 .footer-columns h3 {
     margin-top: 0;
+    color: #ffb3d9;
+    font-weight: 700;
 }
+
 .footer-columns ul {
     list-style: none;
     padding: 0;
 }
+
 .footer-columns a {
-    color: #c4a0b3;
+    color: #ffeef8;
     text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 0.3em 0;
+    display: inline-block;
+}
+
+.footer-columns a:hover {
+    color: #ffb3d9;
+    transform: translateX(5px);
 }
 
 @media (max-width: 800px) {
+    header {
+        padding: 1em;
+    }
+    
+    header .Ebelyn {
+        flex-direction: column;
+        gap: 1em;
+        align-items: flex-start;
+    }
+    
+    header nav ul {
+        flex-wrap: wrap;
+        gap: 0.5em;
+    }
+    
     .main-grid {
         grid-template-columns: 1fr;
+        padding: 1em;
     }
+    
     .sidebar {
         margin-bottom: 1em;
     }
-    .footer-columns {
-        flex-direction: column;
-        gap: 1em;
-    }
+    
 }
 
 img {
-    width: 100px;
-    height: 100px;
-    border-radius: 1000px;
-    border-width: 40px;
-    border: #c4a0b3 solid;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid #ffb3d9;
+    box-shadow: 0 8px 20px rgba(255, 179, 217, 0.4);
+    transition: all 0.3s ease;
+}
+button, .button {
+    background: linear-gradient(135deg, #ffb3d9 0%, #ff99cc 100%);
+    color: white;
+    border: none;
+    padding: 0.8em 2em;
+    border-radius: 25px;
+    transition: all 0.3s ease;
 }
 #backToTop {
     position: fixed;
-    bottom: 24px;
-    right: 24px;
-    z-index: 200;
-    padding: 0.75em 1em;
-    font-size: 1.5em;
-    background: #333;
-    color: #fff;
+    bottom: 20px;
+    right: 20px;
+    background-color: #c4a0b3;
+    color: white;
     border: none;
     border-radius: 50%;
+    padding: 10px 15px;
+    font-size: 18px;
     cursor: pointer;
-    opacity: 0.7;
-    transition: opacity 0.2s;
+    z-index: 999;
+    display: none; /* Hidden by default */
+    transition: opacity 0.3s ease;
 }
+
 #backToTop:hover {
+    background-color: #a27891;
+}
+/* Dropdown container */
+nav ul li.dropdown {
+    position: relative;
+}
+
+/* Hidden dropdown by default */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff0f8;
+    border: 1px solid #ffb3d9;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(255, 179, 217, 0.3);
+    padding: 0.5em 0;
+    min-width: 160px;
+    z-index: 1000;
+}
+
+/* Dropdown items */
+.dropdown-menu li {
+    display: block;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 0.5em 1em;
+    color: #8b5a8c;
+    text-decoration: none;
+    background: transparent;
+    transition: background 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+    background: #ffb3d9;
+    color: white;
+}
+
+/* Show dropdown on hover */
+nav ul li.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    cursor: help;
+}
+
+.info-icon {
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    width: max-content;
+    background-color: #8b5a8c;
+    color: #fff;
+    text-align: center;
+    padding: 0.5em;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position above the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+    font-size: 0.9em;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Show the tooltip on hover */
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
     opacity: 1;
 }
+

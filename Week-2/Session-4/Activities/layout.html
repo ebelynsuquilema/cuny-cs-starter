@@ -6,36 +6,52 @@
     <title>Document</title>
     <link rel="stylesheet" href="layout.css">
 </head>
-<!-- Back to Top Button -->
-<button id="backToTop" title="Back to top">↑</button>
 <body>
-    <header>
+    <!-- Back to Top Button -->
+    <button id="backToTop" title="Back to top">↑</button>
+    
+    <header class="sticky-header">
+
         <h1>Ebelyn Suquilema</h1>
+        <p>
+  Hover over the info icon 
+  <span class="tooltip-container">
+    <span class="info-icon">ℹ️</span>
+    <span class="tooltip-text">I am a student at STEM Academy.</span>
+  </span>
+</p>
+
         <div class="Ebelyn">
             <img src="yukilema.jpeg" alt="Ebelyn Suquilema" width="150" height="200">
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
+<li class="dropdown">
+    <a href="services.html">Services</a>
+    <ul class="dropdown-menu">
+        <li><a href="#">Web Design</a></li>
+        <li><a href="#">Tutoring</a></li>
+        <li><a href="#">Consulting</a></li>
+    </ul>
+</li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="Donation.html">Donations</a></li>
                 </ul>
             </nav>
         </div>
-    </header> 
 
     <main class="main-grid">
         <aside class="sidebar">
             <h2>Sidebar</h2>
             <ul>
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
             </ul>
         </aside>
         <section class="content">
             <h2>Main Content</h2>
-            <p>This is the main content area. Ill add text images etc here.</p>
+            <p>Hello! My name is Ebelyn. I am 18 years old and I am attending STEM Academy's Computer Science program. I am originally from Queens but I am enjoying Staten Island.</p>
         </section>
     </main>
 
@@ -44,30 +60,42 @@
             <div>
                 <h3>Column 1</h3>
                 <ul>
-                    <li><a href="#">Link A</a></li>
-                    <li><a href="#">Link B</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
                 </ul>
             </div>
             <div>
                 <h3>Column 2</h3>
                 <ul>
-                    <li><a href="#">Link C</a></li>
-                    <li><a href="#">Link D</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
                 </ul>
             </div>
             <div>
                 <h3>Column 3</h3>
                 <ul>
-                    <li><a href="#">Link E</a></li>
-                    <li><a href="#">Link F</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
                 </ul>
             </div>
         </div>
     </footer>
 <script>
-document.getElementById('backToTop').onclick = function() {
+  // Show the button when user scrolls down 100px
+  window.onscroll = function () {
+    const btn = document.getElementById("backToTop");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  };
+
+  // Scroll to top when clicked
+  document.getElementById("backToTop").addEventListener("click", function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-};
+  });
 </script>
+
 </body>
 </html>
