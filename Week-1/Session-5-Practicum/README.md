@@ -1,12 +1,12 @@
 # Week 1 Practicum: JavaScript Data Manipulation Project
 
 ## Project Information
-- **Student Name**: [Your Name]
-- **Project Theme**: [Your chosen theme]
-- **Date**: [Submission Date]
+- **Student Name**: [Ebelyn Suquilema]
+- **Project Theme**: [Recipe Collection Manager]
+- **Date**: [Aug 8]
 
 ## Project Description
-[Provide a brief description of your project and what it does]
+[My Recipe Website will explain the recipes that I used throughout the 3 weeks in STEM Academy to cook on my own. ]
 
 ## Data Structure
 [Explain the structure of your JSON data and what each property represents]

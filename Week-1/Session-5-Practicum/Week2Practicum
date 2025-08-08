@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Box Manager</title>
+    <link rel="stylesheet" href="Week2Practicum.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="container">
+            <h1 class="logo"> Recipe Box</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#recipes">Recipes</a></li>
+                    <li><a href="#add-recipe">Add Recipe</a></li>
+                    <li><a href="#statistics">Statistics</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h2>Organize Your Favorite Recipes</h2>
+                <p>Discover, save, and manage your culinary creations in one beautiful place</p>
+                <button class="cta-button" onclick="scrollToSection('add-recipe')">Add Your First Recipe</button>
+            </div>
+        </section>
+
+        <!-- Search and Filter Section -->
+        <section class="search-section">
+            <div class="container">
+                <div class="search-controls">
+                    <div class="search-bar">
+                        <input type="text" id="search-input" placeholder="Search recipes..." />
+                        <button class="search-btn" onclick="searchRecipes()">🔍</button>
+                    </div>
+                    <div class="filter-controls">
+                        <select id="category-filter" onchange="filterRecipes()">
+                            <option value="">All Categories</option>
+                            <option value="Dessert">Dessert</option>
+                            <option value="Main Course">Main Course</option>
+                            <option value="Appetizer">Appetizer</option>
+                            <option value="Salad">Salad</option>
+                        </select>
+                        <select id="difficulty-filter" onchange="filterRecipes()">
+                            <option value="">All Difficulties</option>
+                            <option value="easy">Easy</option>
+                            <option value="medium">Medium</option>
+                            <option value="hard">Hard</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recipe Grid Section -->
+        <section id="recipes" class="recipes-section">
+            <div class="container">
+                <h2 class="section-title">Your Recipe Collection</h2>
+                <div class="recipe-grid" id="recipe-grid">
+                    <!-- Recipe cards will be dynamically generated here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Add Recipe Form Section -->
+        <section id="add-recipe" class="add-recipe-section">
+            <div class="container">
+                <h2 class="section-title">Add New Recipe</h2>
+                <form class="recipe-form" id="recipe-form" onsubmit="handleFormSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="recipe-name">Recipe Name *</label>
+                            <input type="text" id="recipe-name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="recipe-category">Category *</label>
+                            <select id="recipe-category" name="category" required>
+                                <option value="">Select Category</option>
+                                <option value="Dessert">Dessert</option>
+                                <option value="Main Course">Main Course</option>
+                                <option value="Appetizer">Appetizer</option>
+                                <option value="Salad">Salad</option>
+                                <option value="Beverage">Beverage</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="prep-time">Prep Time (minutes) *</label>
+                            <input type="number" id="prep-time" name="prepTime" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cook-time">Cook Time (minutes) *</label>
+                            <input type="number" id="cook-time" name="cookTime" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="servings">Servings *</label>
+                            <input type="number" id="servings" name="servings" min="1" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="difficulty">Difficulty *</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="difficulty" value="easy" required>
+                                <span class="radio-custom"></span>
+                                Easy
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="difficulty" value="medium" required>
+                                <span class="radio-custom"></span>
+                                Medium
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="difficulty" value="hard" required>
+                                <span class="radio-custom"></span>
+                                Hard
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ingredients">Ingredients (one per line) *</label>
+                        <textarea id="ingredients" name="ingredients" rows="5" placeholder="flour
+sugar
+butter
+chocolate chips" required></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn">Add Recipe</button>
+                        <button type="reset" class="reset-btn">Clear Form</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section id="statistics" class="statistics-section">
+            <div class="container">
+                <h2 class="section-title">Recipe Statistics</h2>
+                <div class="stats-grid" id="stats-grid">
+                    <!-- Statistics will be dynamically generated here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>© 2025 Ebelyn Suquilema. Made with love.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
