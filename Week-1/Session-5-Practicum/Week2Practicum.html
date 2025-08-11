@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Box Manager</title>
+    <title>Ebelyn's Recipe Book</title>
     <link rel="stylesheet" href="Week2Practicum.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <!-- Header Section -->
     <header class="main-header">
         <div class="container">
             <h1 class="logo"> Ebelyn's Recipe Book</h1>
@@ -21,10 +21,7 @@
             </nav>
         </div>
     </header>
-
-    <!-- Main Content -->
     <main class="main-content">
-        <!-- Hero Section -->
         <section class="hero">
             <div class="container">
                 <h2>Save and Discover Recipes</h2>
@@ -32,8 +29,6 @@
                 <button class="cta-button" onclick="scrollToSection('add-recipe')">Add Your First Recipe</button>
             </div>
         </section>
-
-        <!-- Search and Filter Section -->
         <section class="search-section">
             <div class="container">
                 <div class="search-controls">
@@ -59,18 +54,13 @@
                 </div>
             </div>
         </section>
-
-        <!-- Recipe Grid Section -->
         <section id="recipes" class="recipes-section">
             <div class="container">
                 <h2 class="section-title">Your Recipe Collection</h2>
                 <div class="recipe-grid" id="recipe-grid">
-                    <!-- Recipe cards will be dynamically generated here -->
                 </div>
             </div>
         </section>
-
-        <!-- Add Recipe Form Section -->
         <section id="add-recipe" class="add-recipe-section">
             <div class="container">
                 <h2 class="section-title">Add New Recipe</h2>
@@ -110,22 +100,15 @@
 
                     <div class="form-group">
                         <label for="difficulty">Difficulty *</label>
-                        <div class="radio-group">
-                            <label class="radio-label">
-                                <input type="radio" name="difficulty" value="easy" required>
-                                <span class="radio-custom"></span>
-                                Easy
-                            </label>
-                            <label class="radio-label">
-                                <input type="radio" name="difficulty" value="medium" required>
-                                <span class="radio-custom"></span>
-                                Medium
-                            </label>
-                            <label class="radio-label">
-                                <input type="radio" name="difficulty" value="hard" required>
-                                <span class="radio-custom"></span>
-                                Hard
-                            </label>
+                        <div class="difficulty-buttons">
+                            <input type="radio" name="difficulty" value="easy" id="difficulty-easy" required>
+                            <label for="difficulty-easy" class="difficulty-btn">Easy</label>
+                            
+                            <input type="radio" name="difficulty" value="medium" id="difficulty-medium" required>
+                            <label for="difficulty-medium" class="difficulty-btn">Medium</label>
+                            
+                            <input type="radio" name="difficulty" value="hard" id="difficulty-hard" required>
+                            <label for="difficulty-hard" class="difficulty-btn">Hard</label>
                         </div>
                     </div>
 
@@ -144,26 +127,15 @@ chocolate chips" required></textarea>
                 </form>
             </div>
         </section>
-
-        <!-- Statistics Section -->
         <section id="statistics" class="statistics-section">
             <div class="container">
                 <h2 class="section-title">Recipe Statistics</h2>
                 <div class="stats-grid" id="stats-grid">
-                    <!-- Statistics will be dynamically generated here -->
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="main-footer">
-        <div class="container">
-            <p>© 2025 Ebelyn Suquilema. Made with love.</p>
-        </div>
-    </footer>
-
-    <!-- JavaScript -->
     <script src="project-starter.js"></script>
 </body>
 </html>
