@@ -86,7 +86,20 @@
         addBtn.addEventListener('click', function() {
             // TODO: Your code here
             // 1. Get the text from textInput.value
+            const inputText = document.getElementById('text-input').value
+            console.log(inputText)
             // 2. Create a new paragraph element
+            const p = document.createElement('p');
+            p.textContent = inputText;
+            console.log(p);
+        
+            const input = document.getElementById('text-input')
+            console.log(input)
+
+            const parent = input.parentElement
+            console.log(parent)
+            parent.appendChild(p)
+
             // 3. Set the paragraph's textContent to the input text
             // 4. Add class "item" to the paragraph
             // 5. Add the paragraph to listContainer

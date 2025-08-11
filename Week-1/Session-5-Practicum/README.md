@@ -6,46 +6,63 @@
 - **Date**: [Aug 8]
 
 ## Project Description
-[My Recipe Website will explain the recipes that I used throughout the 3 weeks in STEM Academy to cook on my own. ]
+My Recipe Collection Manager stores and organizes recipes I made during my time at the STEM Academy. It lets me add, delete, update, search, and get a summary of all my recipes.
 
 ## Data Structure
-[Explain the structure of your JSON data and what each property represents]
+Each recipe has:
 
-Example:
-```javascript
 {
     id: 1,
-    name: "Example",
-    // etc.
+    name: "Cookies", 
+    category: "Dessert",
+    prepTime: 10,
+    cookTime: 15,
+    servings: 24,
+    ingredients: ["flour", "sugar"],
+    difficulty: "easy"
 }
 ```
+There’s also metadata to store total recipes and last update time.
 
 ## Core Functions
 List and briefly describe each function in your project:
 
-1. `addRecord(record)`: [Description]
-2. `removeRecord(id)`: [Description]
-3. [Continue for all functions...]
+1. `addRecord(record)`: Adds a recipe.
+2. `removeRecord(id)`: Deletes a recipe by ID.
+3. `updateRecord`: Changes a recipe’s details.
+4. `searchRecords`: Finds recipes based on criteria.
+5. `generateSummary`: Shows totals and averages.
+
 
 ## How to Use
 Provide step-by-step instructions on how to use your application:
 
 1. Run the program using `project-starter.js`
 2. Choose from the menu options
-3. [Add more specific instructions]
+3. The program will run all functions and show results in the console.
+
 
 ## Test Cases
 Describe the test cases you've implemented:
 
-1. **Test Case 1**: [Description and expected outcome]
-2. **Test Case 2**: [Description and expected outcome]
-3. [Continue for all test cases...]
+1. Add a new recipe: Should appear in the list.
+2. Remove a recipe: Should no longer appear.
+3. Update cook time: Should change in the list.
+4. Search “Chicken”: Shows only chicken recipes.
+5. Summary: Shows total count and average times.
+
+
+
+
+
 
 ## Special Features
-[Describe any additional features or enhancements you added beyond the requirements]
+1. Automatic IDs.
+2. Case-insensitive search.
 
 ## Challenges and Solutions
-[Describe any challenges you faced and how you solved them]
+Making search work for partial matches: Fixed using .includes().
 
 ## Future Improvements
-[List ideas for how this project could be enhanced in Weeks 2 and 3]
+1. Add an interactive menu.
+2. Save/load recipes from a file.
